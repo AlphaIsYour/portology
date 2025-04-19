@@ -1018,7 +1018,6 @@
                         @endforeach
                     </div>
                     
-                    <!-- Tools & Technologies -->
                     <div class="mt-8 pt-6 border-t border-gray-700">
                         <h3 class="text-lg font-medium text-white mb-4">Tools & Technologies</h3>
                         <div class="flex flex-wrap gap-2">
@@ -1032,7 +1031,6 @@
                         </div>
                     </div>
                     
-                    <!-- Soft Skills -->
                     <div class="mt-8 pt-6 border-t border-gray-700">
                         <h3 class="text-lg font-medium text-white mb-4">Soft Skills</h3>
                         <div class="space-y-2">
@@ -1071,18 +1069,14 @@
         <!-- 4. Experience Tab -->
         <div id="content-experience" class="tab-content mt-6 hidden">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Work Experience -->
                 <div class="md:col-span-2 bg-gray-800 rounded-lg p-6">
                     <h2 class="text-xl font-semibold text-white mb-6">Professional Experience</h2>
                     
-                    <!-- Experience Timeline -->
                     <div class="relative pl-8 space-y-8 before:absolute before:inset-0 before:ml-4 before:w-0.5 before:bg-gray-700">
                         @foreach($workExperience as $index => $job)
                         <div class="relative">
-                            <!-- Timeline Dot -->
                             <div class="absolute -left-8 mt-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-gray-800"></div>
                             
-                            <!-- Job Card -->
                             <div class="bg-gray-750 rounded-lg p-5 hover:bg-gray-700 transition duration-300 transform hover:scale-[1.01]">
                                 <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                                     <h3 class="text-lg font-semibold text-white">{{ $job['position'] }}</h3>
@@ -1096,7 +1090,6 @@
                                 
                                 <p class="text-gray-400">{{ $job['description'] }}</p>
                                 
-                                <!-- Key Achievements -->
                                 @if($index === 0)
                                 <div class="mt-4 pt-4 border-t border-gray-700">
                                     <h4 class="text-white font-medium mb-2">Key Achievements</h4>
@@ -1117,7 +1110,6 @@
                                 </div>
                                 @endif
                                 
-                                <!-- Technologies Used -->
                                 <div class="mt-4 pt-4 border-t border-gray-700">
                                     <h4 class="text-white font-medium mb-2">Technologies Used</h4>
                                     <div class="flex flex-wrap gap-2">
@@ -1140,9 +1132,7 @@
                     </div>
                 </div>
                 
-                <!-- Education & Certification Sidebar -->
                 <div class="space-y-6">
-                    <!-- Education -->
                     <div class="bg-gray-800 rounded-lg p-6">
                         <h3 class="text-xl font-semibold text-white mb-6">Education</h3>
                         
@@ -1166,7 +1156,6 @@
                         </div>
                     </div>
                     
-                    <!-- Continuing Education -->
                     <div class="bg-gray-800 rounded-lg p-6">
                         <h3 class="text-lg font-semibold text-white mb-6">Continuing Education</h3>
                         
@@ -1194,7 +1183,6 @@
                         </div>
                     </div>
                     
-                    <!-- Download Resume -->
                     <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center">
                         <div class="w-16 h-16 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center mb-4">
                             <i class="fas fa-file-pdf text-2xl text-blue-400"></i>
@@ -1243,7 +1231,6 @@
                      @endif
                 </div>
                 
-                {{-- // Placeholder for other Achievements / Badges --}}
                 <div class="space-y-6">
                     <h3 class="text-lg font-semibold text-gray-300 mb-4">Badges & Awards</h3>
                      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -1299,7 +1286,6 @@
                      </div>
                  </div>
 
-                {{-- // Recent Activity Feed --}}
                  <div class="mt-8 pt-6 border-t border-gray-700">
                      <h3 class="text-lg font-medium text-white mb-4">Recent Activity Feed</h3>
                      <div class="space-y-4 text-gray-300">
@@ -1353,7 +1339,6 @@
 
                 {{-- //  Blog Posts Grid --}}
                  <div id="blogPosts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                     {{-- Loop through $blogPosts variable --}}
                      @forelse($blogPosts as $post)
                      <div class="blog-post bg-gray-750 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
                            data-categories="{{ strtolower($post['category']) }}"> 
@@ -1520,19 +1505,15 @@
         
        
         <script>
-            // Tab Switching Functionality
             function switchTab(tabId) {
-                // Hide all tab content
                 document.querySelectorAll('.tab-content').forEach(content => {
                     content.classList.add('hidden');
                 });
 
-                // Show selected tab content with animation
                 const selectedTab = document.getElementById('content-' + tabId);
                 if (selectedTab) {
                     selectedTab.classList.remove('hidden');
                     selectedTab.classList.add('fade-in-animation');
-                    // Menghapus kelas animasi setelah selesai untuk memungkinkan animasi ulang
                     setTimeout(() => selectedTab.classList.remove('fade-in-animation'), 500);
                 }
 
@@ -1542,7 +1523,6 @@
                     button.classList.add('text-gray-400', 'hover:text-gray-200');
                 });
 
-                // Apply active styles to clicked tab
                 const activeTabButton = document.getElementById('tab-' + tabId);
                 if (activeTabButton) {
                     activeTabButton.classList.remove('text-gray-400', 'hover:text-gray-200');
@@ -1552,7 +1532,6 @@
                 localStorage.setItem('selectedProfileTab', tabId);
             }
 
-            // Cover Photo Parallax Effect
             function handleParallax() {
                 const coverPhoto = document.querySelector('.cover-parallax');
                 if (coverPhoto) {
@@ -1568,7 +1547,6 @@
                 }
             }
 
-            // Skills Animation on Scroll
             function initSkillsAnimation() {
                  const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -1577,7 +1555,7 @@
                         } else {
                         }
                     });
-                }, { threshold: 0.2 }); // threshold: persentase elemen yang terlihat untuk memicu
+                }, { threshold: 0.2 }); 
 
                 document.querySelectorAll('.skill-animate').forEach(skill => {
                     observer.observe(skill);
@@ -1596,9 +1574,9 @@
                         testimonials[currentTestimonial].classList.add('hidden');
                         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
                         testimonials[currentTestimonial].classList.remove('hidden');
-                        testimonials[currentTestimonial].classList.add('fade-in-animation'); // Ensure fade-in-animation CSS exists
+                        testimonials[currentTestimonial].classList.add('fade-in-animation'); 
                         setTimeout(() => testimonials[currentTestimonial].classList.remove('fade-in-animation'), 500);
-                    }, 5000); // Change testimonial every 5 seconds
+                    }, 5000); 
                 }
             }
 
@@ -1648,16 +1626,14 @@
             }
 
 
-            // Activity Chart Initialization (requires Chart.js library and #activityChart canvas)
             function initActivityChart() {
-                 // Check if Chart is defined (library loaded)
                 if (typeof Chart === 'undefined') {
                     console.error("Chart.js library not found. Cannot initialize activity chart.");
-                    return; // Stop function execution if library is missing
+                    return; 
                 }
                 const ctx = document.getElementById('activityChart');
                 if (ctx) {
-                    const contributionData = <?php echo json_encode($contributions); ?>; // Ensure this PHP variable is passed correctly
+                    const contributionData = <?php echo json_encode($contributions); ?>; 
                     const labels = contributionData.map(item => item.month);
                     const data = contributionData.map(item => item.count);
 
@@ -1680,7 +1656,7 @@
                         },
                         options: {
                             responsive: true,
-                            maintainAspectRatio: false, // Allow aspect ratio to be controlled by parent container
+                            maintainAspectRatio: false, 
                             plugins: {
                                 legend: {
                                     display: false
@@ -1700,7 +1676,6 @@
                                     displayColors: false,
                                     callbacks: {
                                         title: function(context) {
-                                            // Assuming contributions are for the current year
                                             const currentYear = new Date().getFullYear();
                                             return context[0].label + ' ' + currentYear;
                                         },
@@ -1722,7 +1697,6 @@
                                 },
                                 y: {
                                     beginAtZero: true,
-                                     // Suggestive maximum based on data range, can be dynamic
                                     suggestedMax: Math.max(...data) + 10, 
                                     grid: {
                                         color: 'rgba(156, 163, 175, 0.1)',
@@ -1737,14 +1711,11 @@
                         }
                     });
                 }
-                // else { console.log("Activity chart not initialized: #activityChart canvas not found."); }
             }
 
-            // Dark Mode Toggle (requires #darkModeToggle button)
             function initDarkModeToggle() {
                 const darkModeToggle = document.getElementById('darkModeToggle');
                 if (darkModeToggle) {
-                    // Check for existing click listener to avoid duplicates if called multiple times
                      if(darkModeToggle.dataset.listenerAdded) return;
 
                     darkModeToggle.addEventListener('click', () => {
@@ -1752,118 +1723,95 @@
                         const isDarkMode = document.documentElement.classList.contains('dark-mode');
                         localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
 
-                        // Update icon
                         darkModeToggle.innerHTML = isDarkMode ?
                             '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
                     });
 
-                    // Mark listener as added
                     darkModeToggle.dataset.listenerAdded = 'true';
 
-                    // Set initial state from localStorage on load
                     if (localStorage.getItem('darkMode') === 'enabled') {
                         document.documentElement.classList.add('dark-mode');
                         darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
                     } else {
-                         // Ensure sun icon is shown by default if not dark mode
                          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
                     }
                 }
             }
 
-            // Notifications Panel (requires #notificationBtn and #notificationPanel elements)
             function initNotifications() {
                 const notificationBtn = document.getElementById('notificationBtn');
                 const notificationPanel = document.getElementById('notificationPanel');
 
                 if (notificationBtn && notificationPanel) {
-                     // Check for existing click listener
                      if(notificationBtn.dataset.listenerAdded) return;
 
                     notificationBtn.addEventListener('click', (e) => {
-                        e.stopPropagation(); // Prevent click from closing immediately
+                        e.stopPropagation(); 
                         notificationPanel.classList.toggle('hidden');
 
                         if (!notificationPanel.classList.contains('hidden')) {
-                            // Animate notifications in (requires slide-in-animation CSS)
                             const notifications = notificationPanel.querySelectorAll('.notification-item');
                             notifications.forEach((item, index) => {
-                                 item.classList.remove('slide-in-animation', 'opacity-0'); // Remove any previous animation classes
-                                 // Use a small delay to ensure animation triggers
+                                 item.classList.remove('slide-in-animation', 'opacity-0'); 
                                 setTimeout(() => {
                                     item.classList.add('slide-in-animation');
-                                }, index * 50); // Stagger animation slightly
+                                }, index * 50);
                             });
                         }
                     });
 
-                     // Mark listener as added
                     notificationBtn.dataset.listenerAdded = 'true';
 
-                    // Close panel when clicking outside
                     document.addEventListener('click', (e) => {
-                        // Close if clicking anywhere EXCEPT the button or the panel itself
                         if (!notificationPanel.classList.contains('hidden') && !notificationPanel.contains(e.target) && e.target !== notificationBtn && !notificationBtn.contains(e.target)) {
                              notificationPanel.classList.add('hidden');
                          }
                     });
                 }
-                 // else { console.log("Notifications not initialized: missing #notificationBtn or #notificationPanel."); }
             }
             function initContactForm() {
-                 // console.log("initContactForm called"); // Debugging line
                 const contactForm = document.getElementById('contactForm');
                 if (contactForm) {
-                     // Check for existing submit listener
                     if(contactForm.dataset.listenerAdded) return;
 
                     contactForm.addEventListener('submit', (e) => {
                         e.preventDefault();
 
-                        // Basic form validation
                         let isValid = true;
                         const name = document.getElementById('contactName');
                         const email = document.getElementById('contactEmail');
                         const message = document.getElementById('contactMessage');
 
-                        // Reset errors
                         document.querySelectorAll('.error-message').forEach(el => el.remove());
-                        // Remove error borders
                          document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(field => {
                              field.classList.remove('border-red-500');
                          });
 
 
-                        // Validate name
-                        if (!name || !name.value.trim()) { // Check if element exists before accessing value
+                        if (!name || !name.value.trim()) {
                             isValid = false;
                             if (name) showErrorMessage(name, 'Name is required');
                         }
 
-                        // Validate email
                          const emailValue = email ? email.value.trim() : '';
-                        if (!email || emailValue === '' || !isValidEmail(emailValue)) { // Check element existence
+                        if (!email || emailValue === '' || !isValidEmail(emailValue)) { 
                             isValid = false;
                              if (email) showErrorMessage(email, 'Valid email is required');
                         }
 
-                        // Validate message
-                         if (!message || !message.value.trim()) { // Check element existence
+                         if (!message || !message.value.trim()) { 
                             isValid = false;
                              if (message) showErrorMessage(message, 'Message is required');
                         }
 
-                        // If form is valid, show success message (this is a simulation)
                         if (isValid) {
                             const submitBtn = contactForm.querySelector('button[type="submit"]');
-                             if (submitBtn) { // Check if submit button exists
+                             if (submitBtn) { 
                                 const originalText = submitBtn.innerHTML;
 
-                                // Show loading state
                                 submitBtn.disabled = true;
                                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
 
-                                // Simulate form submission
                                 setTimeout(() => {
                                     contactForm.reset();
                                     submitBtn.disabled = false;
@@ -1883,7 +1831,6 @@
                         }
                     });
 
-                     // Mark listener as added
                     contactForm.dataset.listenerAdded = 'true';
                 }
 
@@ -2361,4 +2308,4 @@
             });
 
         </script>
-    @endsection
+@endsection
