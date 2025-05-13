@@ -1265,7 +1265,7 @@
             </div>
         </div>
 
-        {{-- // 6. Activity Tab --}}
+        {{-- 6. Activity Tab --}}
         <div id="content-activity" class="tab-content mt-6 hidden">
              <div class="bg-gray-800 rounded-lg p-6">
                  <h2 class="text-xl font-semibold text-white mb-6">Activity Overview</h2>
