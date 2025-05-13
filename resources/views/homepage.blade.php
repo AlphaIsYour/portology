@@ -2015,7 +2015,6 @@
                                     padding: 12,
                                     callbacks: {
                                         label: function(context) {
-                                            // context.raw gives the data value
                                             return context.label + ': ' + context.raw + '%';
                                         }
                                     }
