@@ -1367,7 +1367,7 @@
              </div>
         </div>
 
-        {{-- // 8. Testimonials Tab --}}
+        {{-- 8. Testimonials Tab --}}
         <div id="content-testimonials" class="tab-content mt-6 hidden">
              <div class="bg-gray-800 rounded-lg p-6">
                  <h2 class="text-xl font-semibold text-white mb-6">What People Say</h2>
