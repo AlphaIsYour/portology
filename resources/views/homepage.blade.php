@@ -1336,7 +1336,7 @@
                  </div>
 
 
-                {{-- //  Blog Posts Grid --}}
+                {{-- Blog Posts Grid --}}
                  <div id="blogPosts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                      @forelse($blogPosts as $post)
                      <div class="blog-post bg-gray-750 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
