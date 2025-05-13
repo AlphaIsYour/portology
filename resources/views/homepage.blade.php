@@ -6,8 +6,7 @@
     $avatar =asset('avatars/default/default.png');
     $xpProgress = 125;
     $level = 99;
-    
-    // Additional user data
+
     $skillsData = [
         'PHP' => 92,
         'JavaScript' => 85,
