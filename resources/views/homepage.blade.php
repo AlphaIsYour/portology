@@ -1992,7 +1992,7 @@
                                 legend: {
                                     position: 'right',
                                     labels: {
-                                        color: '#9ca3af', // Tailwind gray-400
+                                        color: '#9ca3af',
                                         padding: 15,
                                         usePointStyle: true,
                                         pointStyle: 'circle',
