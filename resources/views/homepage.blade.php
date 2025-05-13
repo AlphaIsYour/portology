@@ -1406,7 +1406,7 @@
              </div>
         </div>
 
-        {{-- // 9. Contact Tab --}}
+        {{-- 9. Contact Tab --}}
         <div id="content-contact" class="tab-content mt-6 hidden">
              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                  <div class="bg-gray-800 rounded-lg p-6 space-y-6">
