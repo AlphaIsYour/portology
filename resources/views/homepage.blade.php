@@ -2160,7 +2160,6 @@
 
                 }
                 function hideModal() {
-                     // Animate out
                     modalContent.classList.remove('scale-100', 'opacity-100');
                     modalContent.classList.add('scale-95', 'opacity-0'); 
 
