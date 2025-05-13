@@ -2227,7 +2227,6 @@
                     const mockProjects = {
                          '1': { title: 'E-commerce Platform', client: 'TechRetail Inc.', description: 'A full-featured e-commerce platform...', image: '/images/projects/project1.jpg', technologies: ['Laravel', 'Next.js'], demoUrl: '#', codeUrl: '#' },
                          '2': { title: 'Task Management System', client: 'ProductivePro', description: 'A collaborative task management...', image: '/images/projects/project2.jpg', technologies: ['Node.js', 'React'], demoUrl: '#', codeUrl: '#' },
-                         // Add mock data for other projects if needed
                     };
                     return mockProjects[projectId];
                 }
