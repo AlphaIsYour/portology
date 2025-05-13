@@ -1314,7 +1314,7 @@
              </div>
         </div>
 
-        {{-- // 7. Blog Tab --}}
+        {{-- 7. Blog Tab --}}
         <div id="content-blog" class="tab-content mt-6 hidden">
              <div class="bg-gray-800 rounded-lg p-6">
                  <h2 class="text-xl font-semibold text-white mb-6">Blog Posts</h2>
