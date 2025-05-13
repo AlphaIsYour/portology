@@ -1516,7 +1516,6 @@
                     setTimeout(() => selectedTab.classList.remove('fade-in-animation'), 500);
                 }
 
-                // Update tab button styles
                 document.querySelectorAll('.tab-button').forEach(button => {
                     button.classList.remove('text-white', 'border-b-2', 'border-blue-500');
                     button.classList.add('text-gray-400', 'hover:text-gray-200');
